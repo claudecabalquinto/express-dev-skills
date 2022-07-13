@@ -16,5 +16,5 @@ function show(req, res) {
 function index(req, res) {
   // Obtain the array of todos from the Todo model
   const todos = Skill.getAll();
-  res.render('skill/index', { skill });
+  res.render('skills/index', { skills });
 }
