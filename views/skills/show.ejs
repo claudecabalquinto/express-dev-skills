@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Express</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include('../partials/header') %>
+
     <h1>Skill #<%= skill.id %></h1>
     <h3><%= skill.skill %></h3>
     <h3>Complete: <%= skill.done ? 'Yes' : 'No' %></h3>
-  </body>
-</html>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+
+<%- include('../partials/footer') %>
 
