@@ -4,9 +4,9 @@ const skillsCtrl = require('../controllers/skills');
 
 
 /* GET skills listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// router.get('/', function(req, res, next) {
+//   res.send('respond with a resource');
+// });
 
 router.get('/', skillsCtrl.index);
 router.get('/:id', skillsCtrl.show);
