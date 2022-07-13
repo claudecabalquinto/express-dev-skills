@@ -1,4 +1,4 @@
-const skill = require('../models/skill');
+const Skill = require('../models/skill');
 
 module.exports = {
   index,
@@ -9,12 +9,12 @@ function show(req, res) {
   // Get the todo for the id that is passed as a route param
   // All route params are accessed via the req.params object
   // console.log(req.params)
-  const skill = skill.getOne(req.params.id);
+  const skill = Skill.getOne(req.params.id);
   res.render('skills/show', { skill });
 }
 
 function index(req, res) {
   // Obtain the array of todos from the Todo model
-  const todos = skill.getAll();
+  const todos = Skill.getAll();
   res.render('skill/index', { skill });
 }
